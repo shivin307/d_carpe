@@ -84,11 +84,13 @@ class ServiceScreen extends GetView<ServiceController> {
                   ...List.generate(
                     controller.serviceList.length,
                     (index) {
-                      return Card(
-                        elevation: 4,
-                        color: ColorTheme.kScaffoldColor,
-                        shape: RoundedRectangleBorder(
+                      return Container(
+
+                        decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(36),
+                          boxShadow: kElevationToShadow[1],
+                          color: ColorTheme.kScaffoldColor,
+
                         ),
                         child: Column(
                           children: [

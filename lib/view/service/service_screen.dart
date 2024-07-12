@@ -93,10 +93,12 @@ class ServiceScreen extends GetView<ServiceController> {
                         child: Column(
                           children: [
                             Container(
-                                color: ColorTheme.kRedError,
-                                width: 275,
-                                child: CustomHoverEffect(
-                                    imageUrl: controller.serviceList[index]['photo'] ?? '', width: 275)),
+                              color: ColorTheme.kRedError,
+                              width: 275,
+                              height: 275,
+                              child: CustomHoverEffect(
+                                  imageUrl: controller.serviceList[index]['photo'] ?? '', width: 275),
+                            ),
                             const SizedBox(height: 24),
                             TextWidget(
                               text: controller.serviceList[index]['title'],

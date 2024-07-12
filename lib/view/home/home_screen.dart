@@ -179,7 +179,7 @@ class HomeScreen extends GetView<HomeController> {
             const SizedBox(height: 24),
             Column(
               children: [
-                CustomImageSlider(
+                CustomSlider(
                     height: sizingInformation.isDesktop
                         ? 500
                         : sizingInformation.isTablet

@@ -4,17 +4,17 @@ import 'package:responsive_builder/responsive_builder.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:untitled1/const/color_const.dart';
 
-class CustomImageSlider extends StatefulWidget {
+class CustomSlider extends StatefulWidget {
   final List<Widget> images;
   final double height;
 
-  const CustomImageSlider({super.key, required this.images, required this.height});
+  const CustomSlider({super.key, required this.images, required this.height});
 
   @override
-  _CustomImageSliderState createState() => _CustomImageSliderState();
+  _CustomSliderState createState() => _CustomSliderState();
 }
 
-class _CustomImageSliderState extends State<CustomImageSlider> {
+class _CustomSliderState extends State<CustomSlider> {
   final PageController _controller = PageController();
   int _currentPage = 0;
 

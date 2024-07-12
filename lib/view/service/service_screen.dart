@@ -84,17 +84,19 @@ class ServiceScreen extends GetView<ServiceController> {
                   ...List.generate(
                     controller.serviceList.length,
                     (index) {
-                      return Container(
-
-                        decoration: BoxDecoration(
+                      return Card(
+                        elevation: 4,
+                        color: ColorTheme.kScaffoldColor,
+                        shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(36),
-                          boxShadow: kElevationToShadow[1],
-                          color: ColorTheme.kScaffoldColor,
-
                         ),
                         child: Column(
                           children: [
-                            CustomHoverEffect(imageUrl: controller.doctorList[index]['photo'] ?? '', width: 275),
+                            Container(
+                                color: ColorTheme.kRedError,
+                                width: 275,
+                                child: CustomHoverEffect(
+                                    imageUrl: controller.serviceList[index]['photo'] ?? '', width: 275)),
                             const SizedBox(height: 24),
                             TextWidget(
                               text: controller.serviceList[index]['title'],

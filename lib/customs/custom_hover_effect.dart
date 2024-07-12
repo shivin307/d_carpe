@@ -61,6 +61,7 @@ class _HoverImageState extends State<CustomHoverEffect> with SingleTickerProvide
                 widget.imageUrl,
                 fit: BoxFit.cover,
                 width: widget.width,
+                height: widget.width,
               ),
             ),
           );

@@ -92,7 +92,7 @@ class ServiceScreen extends GetView<ServiceController> {
                         ),
                         child: Column(
                           children: [
-                            CustomHoverEffect(imageUrl: controller.serviceList[index]['photo'] ?? '', width: 275),
+                            CustomHoverEffect(imageUrl: controller.doctorList[index]['photo'] ?? '', width: 275),
                             const SizedBox(height: 24),
                             TextWidget(
                               text: controller.serviceList[index]['title'],

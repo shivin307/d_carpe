@@ -42,6 +42,11 @@ class _HoverImageState extends State<CustomHoverEffect> with SingleTickerProvide
 
   @override
   Widget build(BuildContext context) {
+    return Image.network(
+      widget.imageUrl,
+      fit: BoxFit.cover,
+      width: widget.width,
+    );
     return MouseRegion(
       onEnter: (_) => _startHoverAnimation(),
       onExit: (_) => _endHoverAnimation(),

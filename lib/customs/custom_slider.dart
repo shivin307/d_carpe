@@ -42,7 +42,7 @@ class _CustomImageSliderState extends State<CustomImageSlider> {
           children: [
             GestureDetector(
               onHorizontalDragUpdate: (details) {
-                double sensitivity = 1.0; // Adjust sensitivity as needed
+                double sensitivity = 0.7; // Adjust sensitivity as needed
                 _controller.jumpTo(_controller.offset - details.primaryDelta! / sensitivity);
               },
               child: Container(

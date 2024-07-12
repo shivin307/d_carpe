@@ -42,12 +42,6 @@ class _HoverImageState extends State<CustomHoverEffect> with SingleTickerProvide
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(
-      widget.imageUrl,
-      fit: BoxFit.cover,
-      width: widget.width,
-      height: widget.width,
-    );
     return MouseRegion(
       onEnter: (_) => _startHoverAnimation(),
       onExit: (_) => _endHoverAnimation(),
@@ -58,11 +52,10 @@ class _HoverImageState extends State<CustomHoverEffect> with SingleTickerProvide
             scale: _animation.value,
             child: ClipRRect(
               borderRadius: BorderRadius.circular(12),
-              child: Image.network(
+              child: Image.asset(
                 widget.imageUrl,
                 fit: BoxFit.cover,
                 width: widget.width,
-                height: widget.width,
               ),
             ),
           );
